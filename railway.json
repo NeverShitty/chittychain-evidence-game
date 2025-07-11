@@ -1,0 +1,23 @@
+{
+  "build": {
+    "builder": "DOCKERFILE"
+  },
+  "deploy": {
+    "startCommand": "node chittychain-game-server.js",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 3,
+    "healthcheckPath": "/api/chain/status",
+    "healthcheckTimeout": 300
+  },
+  "environments": {
+    "production": {
+      "variables": {
+        "NODE_ENV": "production",
+        "PORT": "3101",
+        "GAME_NAME": "ChittyChain Evidence Game",
+        "ENABLE_REAL_BLOCKCHAIN": "true",
+        "LOG_LEVEL": "info"
+      }
+    }
+  }
+}

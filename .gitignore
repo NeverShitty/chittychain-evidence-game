@@ -1,0 +1,9 @@
+node_modules/
+logs/
+temp/
+backups/
+*.log
+.env.local
+.DS_Store
+*.tmp
+generated_documents/
