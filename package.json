@@ -2,7 +2,6 @@
   "name": "chittychain-evidence-game",
   "version": "1.0.0",
   "description": "Gamified blockchain evidence minting interface for ChittyChain",
-  "type": "module",
   "main": "chittychain-game-server.js",
   "scripts": {
     "start": "node chittychain-game-server.js",

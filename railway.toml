@@ -1,0 +1,16 @@
+[build]
+  builder = "nixpacks"
+  buildCommand = "npm install"
+
+[deploy]
+  startCommand = "node chittychain-game-server.js"
+  healthcheckPath = "/api/chain/status"
+  healthcheckTimeout = 300
+  restartPolicyType = "on_failure"
+  restartPolicyMaxRetries = 3
+
+[[services]]
+  name = "web"
+  port = 3101
+  targetPort = 3101
+  protocol = "http"
